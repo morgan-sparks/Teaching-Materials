@@ -8,5 +8,5 @@ This folder is filled with teaching materials I have made over the course of my 
 
 
 #### Files that end in `.md` will be rendered files and appear in a much more useable format
-### Files that end in `.Rmd` are the raw Rmarkdown files that these were originally written in
+#### Files that end in `.Rmd` are the raw Rmarkdown files that these were originally written in
 
