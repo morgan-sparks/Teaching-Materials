@@ -2,8 +2,7 @@
 title: "Intro to ggplot2"
 author: "Morgan Sparks"
 date: "10/9/2018"
-output:
-  word_document: default
+output: rmarkdown::github_document
 ---
 
 ```{r setup, include=FALSE}
