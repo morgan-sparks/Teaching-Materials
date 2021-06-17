@@ -68,7 +68,9 @@ ggplot(peng_data, aes(x = bill_length_mm)) +
 
     ## Warning: Removed 2 rows containing non-finite values (stat_bin).
 
-![](README_figs/Intro_ggplot/README-unnamed-chunk-4-1.png) Perhaps we don't like our bin size, we can easily change it with the following code. Binwidth here is based on your data and is up to you to choose. Here we specifify bins for every 0.5 mm.
+![](README_figs/Intro_ggplot/README-unnamed-chunk-4-1.png)
+
+Perhaps we don't like our bin size, we can easily change it with the following code. Binwidth here is based on your data and is up to you to choose. Here we specifify bins for every 0.5 mm.
 
 ``` r
 ggplot(peng_data, aes(x = bill_length_mm)) +
@@ -88,7 +90,9 @@ ggplot(peng_data, aes(x = bill_length_mm)) +
 
     ## Warning: Removed 2 rows containing non-finite values (stat_density).
 
-![](README_figs/Intro_ggplot/README-unnamed-chunk-6-1.png) If we look at our histogram and our density plots, it looks like our data might be multimodal. Perhaps it's time to consider our categorical variable. To do this we can create boxplots that give you a sense of the data you are working with. Here it makes sense to look at petal lenght as a function of one of our categorical variables, species.
+![](README_figs/Intro_ggplot/README-unnamed-chunk-6-1.png)
+
+If we look at our histogram and our density plots, it looks like our data might be multimodal. Perhaps it's time to consider our categorical variable. To do this we can create boxplots that give you a sense of the data you are working with. Here it makes sense to look at petal lenght as a function of one of our categorical variables, species.
 
 ``` r
 ggplot(peng_data, aes(x = species , y =bill_length_mm)) +
@@ -97,7 +101,9 @@ ggplot(peng_data, aes(x = species , y =bill_length_mm)) +
 
     ## Warning: Removed 2 rows containing non-finite values (stat_boxplot).
 
-![](README_figs/Intro_ggplot/README-unnamed-chunk-7-1.png) Indeed, it looks like we have different distributions for our species.
+![](README_figs/Intro_ggplot/README-unnamed-chunk-7-1.png)
+
+Indeed, it looks like we have different distributions for our species.
 
 Okay, now that we have a good sense of the distribution of our data, let's think more about our modeling appraoch. Let's say for the sake of this exercise, we think that penguins with longer beaks will also have longer flippers.
 
@@ -350,7 +356,7 @@ Something that is becoming increasingly popular with some journals is to show su
 ggplot(peng_ls_df, aes(x = species, y = emmean, colour = species)) +
   geom_point(size = 2) + 
   geom_point(aes(x= species, y = bill_length_mm), peng_data, alpha = 0.3, size =1, position = "jitter") +
-  geom_errorbar(aes(ymin =emmean - SE, ymax = emmean + SE), peng_ls_df, width = 0.05) +
+  geom_errorbar(aes(ymin =emmean - SE, ymax = emmean + SE), peng_ls_df, width = 0.15) +
   labs(x = "Species", y = "LSM of bill length (mm)") +
   ylim(35,55) +
   scale_color_brewer(palette = "Dark2") +
@@ -358,7 +364,7 @@ ggplot(peng_ls_df, aes(x = species, y = emmean, colour = species)) +
   theme_classic(base_size = 14)
 ```
 
-    ## Warning: Removed 16 rows containing missing values (geom_point).
+    ## Warning: Removed 17 rows containing missing values (geom_point).
 
 ![](README_figs/Intro_ggplot/README-unnamed-chunk-22-1.png)
 
@@ -368,7 +374,7 @@ Many journals will charge extra to print in color. There are a couple of ways of
 ggplot(peng_ls_df, aes(x = species, y = emmean)) +
   geom_point(size = 2) + 
   geom_point(aes(x= species, y = bill_length_mm), peng_data, alpha = 0.3, size =1, position = "jitter") +
-  geom_errorbar(aes(ymin =emmean - SE, ymax = emmean + SE), peng_ls_df, width = 0.05) +
+  geom_errorbar(aes(ymin =emmean - SE, ymax = emmean + SE), peng_ls_df, width = 0.15) +
   labs(x = "Species", y = "LSM of bill length (mm)") +
   ylim(35,55) +
   guides(colour=FALSE) + 
@@ -383,7 +389,7 @@ The best way to get around this is by changing the `scale_color_brewer` to `scal
 ggplot(peng_ls_df, aes(x = species, y = emmean, colour = species)) +
   geom_point(size = 2) + 
   geom_point(aes(x= species, y = bill_length_mm), peng_data, alpha = 0.3, size =1, position = "jitter") +
-  geom_errorbar(aes(ymin =emmean - SE, ymax = emmean + SE), peng_ls_df, width = 0.05) +
+  geom_errorbar(aes(ymin =emmean - SE, ymax = emmean + SE), peng_ls_df, width = 0.15) +
   labs(x = "Species", y = "LSM of bill length (mm)") +
   ylim(35,55) +
   scale_color_grey(start=.5, end=0.2) + # see change here
@@ -391,7 +397,7 @@ ggplot(peng_ls_df, aes(x = species, y = emmean, colour = species)) +
   theme_classic(base_size = 14)
 ```
 
-    ## Warning: Removed 16 rows containing missing values (geom_point).
+    ## Warning: Removed 17 rows containing missing values (geom_point).
 
 ![](README_figs/Intro_ggplot/README-unnamed-chunk-24-1.png)
 
@@ -403,7 +409,7 @@ Let's say you didn't like the names of the x-axis labels. You could change them 
 ggplot(peng_ls_df, aes(x = species, y = emmean, colour = species)) +
   geom_point(size = 2) + 
   geom_point(aes(x= species, y = bill_length_mm), peng_data, alpha = 0.3, size =1, position = "jitter") +
-  geom_errorbar(aes(ymin =emmean - SE, ymax = emmean + SE), peng_ls_df, width = 0.05) +
+  geom_errorbar(aes(ymin =emmean - SE, ymax = emmean + SE), peng_ls_df, width = 0.15) +
   labs(x = "Species", y = "LSM of bill length (mm)") +
   ylim(35,55) +
   scale_colour_brewer(palette = "Dark2") +
@@ -413,7 +419,7 @@ ggplot(peng_ls_df, aes(x = species, y = emmean, colour = species)) +
   theme_classic(base_size = 14)
 ```
 
-    ## Warning: Removed 16 rows containing missing values (geom_point).
+    ## Warning: Removed 18 rows containing missing values (geom_point).
 
 ![](README_figs/Intro_ggplot/README-unnamed-chunk-25-1.png)
 
