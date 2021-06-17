@@ -98,7 +98,7 @@ y <-c(1,2,3,4,5)
 plot(x~y)
 ```
 
-![](README_figs/README-unnamed-chunk-8-1.png)
+![](README_figs/Basic_r/README-unnamed-chunk-8-1.png)
 
 A quick note about naming objects in R
 --------------------------------------
@@ -206,7 +206,7 @@ Now that you know how the data are organized and what we're calling the variable
 plot(dist~speed, data = cars_data)
 ```
 
-![](README_figs/README-unnamed-chunk-16-1.png)
+![](README_figs/Basic_r/README-unnamed-chunk-16-1.png)
 
 Notice in the past command, not only did we display what parts of the data we wanted to plot `distance~speed`, but also the the source of the data we were using `data =  cars_data`. Almost all functions will have some sort data input section similar to this encoded within the function. Sometimes you will see people use the `attach()` function, which basically says whatever comes after uses the attached data. Generally, this is ill-advised because you will oftend forget to `detach()` data, which can be quite confusing when using a long script.
 
