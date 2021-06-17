@@ -64,8 +64,6 @@ ggplot(peng_data, aes(x = bill_length_mm)) +
   geom_histogram()
 ```
 
-    ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
-
     ## Warning: Removed 2 rows containing non-finite values (stat_bin).
 
 ![](README_figs/Intro_ggplot/README-unnamed-chunk-4-1.png)
@@ -128,8 +126,6 @@ ggplot(peng_data, aes(x = flipper_length_mm, y =  bill_length_mm)) +
   geom_smooth(method = "lm") 
 ```
 
-    ## `geom_smooth()` using formula 'y ~ x'
-
     ## Warning: Removed 2 rows containing non-finite values (stat_smooth).
 
     ## Warning: Removed 2 rows containing missing values (geom_point).
@@ -149,8 +145,6 @@ ggplot(peng_data, aes(x = flipper_length_mm, y =  bill_length_mm, group = specie
   geom_smooth(method = "lm") 
 ```
 
-    ## `geom_smooth()` using formula 'y ~ x'
-
     ## Warning: Removed 2 rows containing non-finite values (stat_smooth).
 
     ## Warning: Removed 2 rows containing missing values (geom_point).
@@ -166,8 +160,6 @@ ggplot(peng_data, aes(x = flipper_length_mm, y =  bill_length_mm, group = specie
   geom_point() +
   geom_smooth(method = "lm") 
 ```
-
-    ## `geom_smooth()` using formula 'y ~ x'
 
     ## Warning: Removed 2 rows containing non-finite values (stat_smooth).
 
@@ -186,8 +178,6 @@ ggplot(peng_data, aes(x = flipper_length_mm, y =  bill_length_mm, group = specie
   labs(x = "Flipper Length (mm)", y = "Bill Length (mm)")
 ```
 
-    ## `geom_smooth()` using formula 'y ~ x'
-
     ## Warning: Removed 2 rows containing non-finite values (stat_smooth).
 
     ## Warning: Removed 2 rows containing missing values (geom_point).
@@ -204,8 +194,6 @@ ggplot(peng_data, aes(x = flipper_length_mm, y =  bill_length_mm, group = specie
   xlim(170,240) + # same as above but for the x axis
   labs(x = "Flipper Length (mm)", y = "Bill Length (mm)")
 ```
-
-    ## `geom_smooth()` using formula 'y ~ x'
 
     ## Warning: Removed 2 rows containing non-finite values (stat_smooth).
 
@@ -227,8 +215,6 @@ ggplot(peng_data, aes(x = flipper_length_mm, y =  bill_length_mm, group = specie
   scale_color_brewer(palette = "Dark2" )
 ```
 
-    ## `geom_smooth()` using formula 'y ~ x'
-
     ## Warning: Removed 2 rows containing non-finite values (stat_smooth).
 
     ## Warning: Removed 2 rows containing missing values (geom_point).
@@ -247,8 +233,6 @@ ggplot(peng_data, aes(x = flipper_length_mm, y =  bill_length_mm, group = specie
   scale_color_brewer(palette = "Dark2" ) +
   theme_classic()
 ```
-
-    ## `geom_smooth()` using formula 'y ~ x'
 
     ## Warning: Removed 2 rows containing non-finite values (stat_smooth).
 
