@@ -348,7 +348,7 @@ ggplot(peng_ls_df, aes(x = species, y = emmean, colour = species)) +
   theme_classic(base_size = 14)
 ```
 
-    ## Warning: Removed 17 rows containing missing values (geom_point).
+    ## Warning: Removed 18 rows containing missing values (geom_point).
 
 ![](README_figs/Intro_ggplot/README-unnamed-chunk-22-1.png)
 
@@ -381,7 +381,7 @@ ggplot(peng_ls_df, aes(x = species, y = emmean, colour = species)) +
   theme_classic(base_size = 14)
 ```
 
-    ## Warning: Removed 17 rows containing missing values (geom_point).
+    ## Warning: Removed 16 rows containing missing values (geom_point).
 
 ![](README_figs/Intro_ggplot/README-unnamed-chunk-24-1.png)
 
@@ -403,7 +403,7 @@ ggplot(peng_ls_df, aes(x = species, y = emmean, colour = species)) +
   theme_classic(base_size = 14)
 ```
 
-    ## Warning: Removed 18 rows containing missing values (geom_point).
+    ## Warning: Removed 16 rows containing missing values (geom_point).
 
 ![](README_figs/Intro_ggplot/README-unnamed-chunk-25-1.png)
 

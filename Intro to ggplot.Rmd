@@ -17,7 +17,7 @@ We're going to learn the basics of ggplot today, especially as it pertains to gr
 
 Let's start by getting more familiar with our data. We will be using the Palerm's penguins dataset which is a dataset built into the library `palmerpenguins`. 
 
-Also, before we get started, the end all be all for information about ggplot is this site https://ggplot2.tidyverse.org/reference/index.html.  If your question isn't answered there, I can almost guarantee it is answered somewhere else, ggplot is quickly becoming the default plotting program of R.
+Also, before we get started, the end all be all for information about ggplot is this site <https://ggplot2.tidyverse.org/reference/index.html>.  If your question isn't answered there, I can almost guarantee it is answered somewhere else, ggplot is quickly becoming the default plotting program of R.
 
 One final note I would like to make about ggplot is that one of the major differences between ggplot and base R plotting is how the graphing program interacts with your dataset.  Base R is much more flexible at reading in your data, whereas ggplot prefers your data is basically in a format where every datum is a row itself with all the information for independent variables as columns along that row.  For instance if you were looking at something like hatch timing and noted 15 individuals hatched on given day, each of those individuals would have to be a specific line for ggplot to incorporate them. A lot of the reshaping of data can be done with the `dplyr` package.
 
