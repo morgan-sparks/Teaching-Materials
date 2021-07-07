@@ -1,7 +1,0 @@
-# how to touch files on a directory
-
-find * -exec touch -a {} \;
-
-# how to set up and interactive job
-
-sinteractive -u sparks35 -A beagle -a 
